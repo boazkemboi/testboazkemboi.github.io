@@ -25,7 +25,7 @@
         }
     });
 
-    (function($) {
+   $(document).ready(function() {
     $("#contact-form").submit(function(e) {
         e.preventDefault();
 
@@ -44,6 +44,9 @@
                 console.log("Error:", error);
             }
         });
+    });
+});
+
     });
     
     
