@@ -26,7 +26,7 @@
     });
 
     (function($) {
-    ("#contact-form").submit(function(e) {
+    $("#contact-form").submit(function(e) {
         e.preventDefault();
 
         var formData = $(this).serialize();
@@ -45,8 +45,6 @@
             }
         });
     });
-});
-
     
     
     // Back to top button
