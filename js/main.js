@@ -24,6 +24,29 @@
             $('.sticky-top').css('top', '-100px');
         }
     });
+
+    $(document).ready(function() {
+    $("#contact-form").submit(function(e) {
+        e.preventDefault();
+
+        var formData = $(this).serialize();
+
+        $.ajax({
+            type: "POST",
+            url: $(this).attr("action"),
+            data: formData,
+            success: function(response) {
+                // Handle the response from the server (e.g., display success message)
+                console.log(response);
+            },
+            error: function(error) {
+                // Handle errors (e.g., display an error message)
+                console.log("Error:", error);
+            }
+        });
+    });
+});
+
     
     
     // Back to top button
