@@ -25,8 +25,8 @@
         }
     });
 
-    $(document).ready(function() {
-    $("#contact-form").submit(function(e) {
+    (function($) {
+    ("#contact-form").submit(function(e) {
         e.preventDefault();
 
         var formData = $(this).serialize();
